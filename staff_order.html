@@ -37,6 +37,112 @@
     </header>
 
     <main>
+        <!-- SECTION  -->
+        <section id="workspace"> 
+            <p>STAFF WORKSPACE</p>
+            <h1>Order Management</h1>
+            <p>Keep the kitchen moving and the comfort coming</p>
+            <button id="kitchen_btn">Kitchen is Open</button>
+        </section>
+
+       <!-- STATUS -->
+        <section id="status_count">
+            <div id="totalOrders"> 
+                <h2 id="order_count">--</h2>
+                <p>Total orders today</p> 
+            </div>
+
+
+            <div id="Pending">
+                <h2 id="pending_count">--</h2>
+                <p>Pending</p> 
+            </div>
+
+
+            <div id="Preparing">
+                <h2 id="preparing_count">--</h2>
+                <p>Preparing</p> 
+            </div>
+
+
+            <div id="Completed">
+                <h2 id="completed_count">--</h2>
+                <p>Completed</p> 
+            </div>
+        </section>
+
+        <!-- FILTER BUTTONS -->
+        <section id="filters">
+
+            <button id="filterAll">All Orders (<span id="allCount">0</span>)</button>
+            
+            <button id="filterPending">Pending (<span id="pendingCount">0</span>)</button>
+            
+            <button id="filterPreparing">Preparing (<span id="preparingCount">0</span>)</button>
+
+            <span id="updated">Updated just now</span>
+
+            <button id="date_btn">mm/dd/yyyy</button>
+        </section>
+
+        <!-- TABLE -->
+        <table border="1" id="orders_table">
+
+            <thead>
+                <tr>
+                    <th>Order / Customer</th>
+                    <th>Service</th>
+                    <th>Items Ordered</th>
+                    <th>Total</th>
+                    <th>Date / Time</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+
+            <tbody id="table_content">
+                <tr id="empty">
+                    <td colspan="6">No orders yet</td>
+                </tr>
+            </tbody>
+
+        </table>
+
+        <!-- TEMPLATE NG CONTENT NG TABLE -->
+        <template id="ordersTemplate">
+            <tr class="order_row">
+
+                <td>
+                    <span class="orderId"></span> <br>
+                    <span class="customerName"></span>
+                </td>
+                <td class="orderService"></td>
+                <td class="orderItems"></td>
+                <td class="orderTotal"></td>
+                <td>
+                    <span class="orderDate"></span> <br>
+                    <span class="orderTime"></span>
+                </td>
+                <td>
+                    <select class="status">
+                        <option value="pending" selected>PENDING</option>
+                        <option value="preparing">PREPARING</option>
+                        <option value="completed">COMPLETED</option>
+                        <option value="cancelled">CANCELLED</option>
+                    </select>
+                </td>
+
+            </tr>
+        </template>
+
+        <!-- PAGE BUTTON FOR TABLE -->
+        <div id="tablePage">
+            <p>Showing <span id="shownOrder">0</span> of <span id="orders">0</span> orders</p>
+            <button id="prevbtn">&larr;</button>
+            <button id="pagebtn">1</button>
+            <button id="nextbtn">&rarr;</button>
+
+
+        </div>
 
     </main>
 
