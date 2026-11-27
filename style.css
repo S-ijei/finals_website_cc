@@ -1,0 +1,255 @@
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --cream: #faf2e8;
+    --red: #9c3d3d;
+    --goldDiv: #f6be58;
+    --tealOrder: #156c6d;
+    --brownText: #5B3A29;
+} 
+
+body {
+    background: var(--cream);
+    font-family:"Nunito Sans", sans-serif ; 
+    margin: 0;
+}
+
+h1, h2, h3, h4, p {
+    margin: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid var(--red)  ;
+}
+
+.navbar_logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.navbar_name {
+    font-weight: 600;
+    font-size: 1.375rem;
+    line-height: 1.08;
+    width: 7rem;
+}
+
+nav.navbar_link {
+    display: flex;
+    gap: 2.5rem;
+}
+
+nav.navbar_link a {
+   text-decoration: none;
+   font-weight: 700;
+   line-height: 1.45;
+}
+
+.navbar_buttons {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.navbar_buttons button {
+    font-family: inherit;
+    font-weight: 700;
+    padding: 0.6rem 1.4rem;
+    border-radius: 1.4rem;
+    cursor: pointer;
+}
+
+.cart_btn {
+    border: none;
+    width: 7.5rem;
+}
+
+nav a.activePage {
+    border-bottom: 2px solid var(--tealOrder);
+    padding-bottom: 0.25rem;
+}
+
+.staff_btn {
+    background: transparent;
+    border: 1px solid var(--red);
+    color: var(--red)
+}
+.logo-cc {
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+}
+
+/* Fredoka Fonts */
+.navbar_name, 
+.hero_text h2,
+.mhp_header_title,
+.mhp_card_title,
+.dh_header,
+.mhp_card_eyebrow,
+.footer_title {
+    font-family: "Fredoka", sans-serif;
+}
+
+
+/* Color Red: All Fonts */
+.navbar_name, 
+.hero_text h2,
+.mhp_header_title,
+.mhp_card_title,
+.mhp_card_eyebrow,
+.dh_header,
+.hero_img span,
+.dh_eyebrow {
+    color: var(--red);
+}
+
+/* Color White: All Fonts */
+.footer_title,
+.hero_button,
+.mhp_card_button,
+.footer_link,
+.footer_divider,
+.footer_tagline,
+.footer_copyright,
+.cart_btn {
+    color: var(--cream);
+}
+
+/* Color Brown */
+.navbar_link a,
+.dh_desc,
+.dh_text,
+.dh_bottext,
+.hero_desc {
+    color: var(--brownText);
+}
+
+/* Teal */
+.hero_eyebrow,
+.mhp_header_desc,
+a.activePage {
+    color: var(--tealOrder);
+}
+
+/* Background Teal */ 
+.hero_button,
+.mhp_card_button,
+.cart_btn {
+    background: var(--tealOrder);
+}
+
+/* Hero */
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 3rem;
+    padding: 3rem 2rem;
+    border-bottom: 5rem solid var(--goldDiv);
+}
+
+.hero_text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+
+    margin-left: 5rem;
+}
+
+.hero_eyebrow {
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.hero_text h2 {
+    font-size: 3.625rem;
+    line-height: 1.08;
+    
+}
+
+.hero_desc {
+    line-height: 6.45;
+}
+
+.hero_button {
+    padding: 0.8rem 1.6rem;
+    border-radius: 1.3rem;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.hero_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+.hero_img span {
+    display: block;
+    margin-top: 0.5rem;
+    text-align: right;
+    font-size: 0.75rem;
+}
+
+
+/* footer */
+.footer {
+    background: var(--red);
+    padding: 7rem;
+}
+
+.footer_main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer_brand {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer_logo_img {
+    width: 3.5rem;
+    height: 3.5rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.footer_title {
+    font-size: 2.4rem;
+    font-weight: 600;
+}
+
+.footer_right {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer_nav {
+    display: flex;
+    gap: 1.3rem;
+}
+
+.footer_link {
+    text-decoration: none;
+}
+
