@@ -1,3 +1,6 @@
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/*                                          UNIVERSAL CODES                                                */
 
 * {
     box-sizing: border-box;
@@ -31,8 +34,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
-    border-bottom: 1px solid var(--red)  ;
+    padding: 1rem 4rem;
+    border-bottom: 2px solid var(--red);
 }
 
 .navbar_logo {
@@ -50,18 +53,22 @@ header {
 
 nav.navbar_link {
     display: flex;
-    gap: 2.5rem;
+    gap: 3.5rem;
+    padding-top: 0.6rem;
 }
 
 nav.navbar_link a {
-   text-decoration: none;
-   font-weight: 700;
-   line-height: 1.45;
+    position: relative; 
+    text-decoration: none;
+    font-weight: 700;
+    line-height: 1.45;
+    padding-bottom: 0.25rem; 
 }
 
 .navbar_buttons {
+    padding-top: 0.6rem;
     display: flex;
-    gap: 0.75rem;
+    gap: 1rem;
 }
 
 .navbar_buttons button {
@@ -70,27 +77,61 @@ nav.navbar_link a {
     padding: 0.6rem 1.4rem;
     border-radius: 1.4rem;
     cursor: pointer;
+    height: 2.75rem;
+    width: 8rem;
 }
 
 .cart_btn {
-    border: none;
-    width: 7.5rem;
-}
-
-nav a.activePage {
-    border-bottom: 2px solid var(--tealOrder);
-    padding-bottom: 0.25rem;
+    border: none; 
 }
 
 .staff_btn {
     background: transparent;
-    border: 1px solid var(--red);
-    color: var(--red)
+    border: 2px solid var(--red);
+    color: var(--red);
 }
+
 .logo-cc {
     width: 4.5rem;
     height: 4.5rem;
     border-radius: 50%;
+}
+
+nav.navbar_link a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--tealOrder);
+    transform: scaleX(0);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+nav.navbar_link:hover a.activePage {
+    color: #5B3A29;
+}
+
+nav.navbar_link a:hover {
+    color: var(--tealOrder);
+}
+
+nav.navbar_link a.activePage::after {
+    transform: scaleX(1);
+}
+
+.activePage{
+    color: var(--tealOrder);
+}
+
+nav.navbar_link:hover a.activePage::after {
+    transform: scaleX(0);
+}
+
+nav.navbar_link a:hover::after {
+    transform: scaleX(1);
+    background-color: var(--tealOrder);
 }
 
 /* Fredoka Fonts */
@@ -103,7 +144,6 @@ nav a.activePage {
 .footer_title {
     font-family: "Fredoka", sans-serif;
 }
-
 
 /* Color Red: All Fonts */
 .navbar_name, 
@@ -151,6 +191,73 @@ a.activePage {
 .cart_btn {
     background: var(--tealOrder);
 }
+
+
+
+/* footer */
+.footer {
+    background: var(--red);
+    padding: 3rem 4rem 5rem;
+}
+
+.footer_main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer_brand {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-left: 4rem;
+}
+
+.footer_logo_img {
+    width: 4rem;
+    height: 5.5rem;
+    object-fit: cover;
+    border-radius: 50%;
+    padding-bottom: 1rem;
+}
+
+.footer_title {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.footer_tagline{
+    padding-top: 0.7rem;
+}
+
+.footer_right {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;                       
+    margin-right: 6rem;                 
+    padding-top: 0.4rem;               
+}
+
+.footer_nav {
+    display: flex;
+    gap: 1.3rem;
+}
+
+.footer_link {
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.footer_link:hover {
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 0.98rem;
+}
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+
+/* ----------------------------------------MAIN PAGE/ HOME PAGE -------------------------------------------*/
 
 /* Hero */
 .hero {
@@ -208,48 +315,4 @@ a.activePage {
 }
 
 
-/* footer */
-.footer {
-    background: var(--red);
-    padding: 7rem;
-}
-
-.footer_main {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.footer_brand {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.footer_logo_img {
-    width: 3.5rem;
-    height: 3.5rem;
-    object-fit: cover;
-    border-radius: 50%;
-}
-
-.footer_title {
-    font-size: 2.4rem;
-    font-weight: 600;
-}
-
-.footer_right {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.footer_nav {
-    display: flex;
-    gap: 1.3rem;
-}
-
-.footer_link {
-    text-decoration: none;
-}
-
+/* ----------------------------------------MAIN PAGE/ HOME PAGE -------------------------------------------*/
